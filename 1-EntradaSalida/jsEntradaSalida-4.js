@@ -4,6 +4,9 @@
 */
 function Mostar()
 {
-	
+	var nombre;
+	nombre = prompt("Ingresa tu nombre");
+	//se usa el document.GetElementById ANTES DEL IGUAL para reemplazar al alert
+	document.getElementById('elNombre').value = nombre
 }
 
