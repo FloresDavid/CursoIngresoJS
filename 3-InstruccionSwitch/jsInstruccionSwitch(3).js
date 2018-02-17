@@ -1,6 +1,5 @@
 function Mostrar()
 {
-	//tomo la edad  
 	var mesDelAño = document.getElementById('mes').value;
 
 	//alert (mesDelAño);
@@ -12,7 +11,8 @@ function Mostrar()
 			break;
 
 		default:
-			alert ("Este mes tiene 30 o más dias.")
+			alert ("Este mes tiene 30 o más dias.");
+			break;
 	}		
 
 

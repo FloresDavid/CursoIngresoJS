@@ -1,6 +1,5 @@
 function Mostrar()
 {
-	//tomo la edad  
 	var mesDelAño = document.getElementById('mes').value;
 
 	switch(mesDelAño) {
@@ -19,8 +18,7 @@ function Mostrar()
 			
 		case "Diciembre":
 			alert ("Felices fiestas!!!");
+			break;
 	}
-
-
 
 }//FIN DE LA FUNCIÓN
