@@ -41,7 +41,7 @@ function Mostrar()
 		{
 			contadorDeNumerosPares += 1;
 		}
-		respuesta = prompt ("Ingrese 'si' para seguir cargando numeros, 'no' para detener la carga.");
+		respuesta = prompt ("Ingrese 'no' para detener la carga.");
 	}
 
 	promedioDePositivos = acumuladorDePositivos/contadorDePositivos;
