@@ -5,9 +5,8 @@ function Mostrar()
 
 	while (clave != "utn750")
 	{
-		alert("clave incorrecta, ingrese nuevamente.");
 
-		clave = prompt("ingrese el número clave.");
+		clave = prompt("Clave incorrecta, ingrese nuevamente.");
 	}
 
 	alert ("Clave correcta.");

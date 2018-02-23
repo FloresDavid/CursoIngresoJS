@@ -11,29 +11,35 @@ function Mostrar()
 
 	while(respuesta!="no")
 	{
-		numero = parseInt(prompt("Ingrese un numero"));
-
-		if (numeroMaximo == "")
-		{
-			numeroMaximo = numero;
-			numeroMinimo = numero;
-		}
-		else 
-		{
-			if (numeroMaximo < numero)
+		if (respuesta == "si")
+		{		
+			numero = parseInt(prompt("Ingrese un numero"));
+			
+			if (numeroMaximo == "")
 			{
 				numeroMaximo = numero;
+				numeroMinimo = numero;
 			}
-			else
+			else 
 			{
-				if (numeroMinimo > numero)
+				if (numeroMaximo < numero)
 				{
-					numeroMinimo = numero;
-				} 
+					numeroMaximo = numero;
+				}
+				else
+				{
+					if (numeroMinimo > numero)
+					{
+						numeroMinimo = numero;
+					} 
+				}
 			}
+			respuesta = prompt ("Ingrese 'si' para seguir cargando numeros, 'no' para detener la carga")		
 		}
-
-		respuesta = prompt ("Ingrese no para detener la carga de numeros")
+		else
+		{
+			respuesta = prompt ("Ingrese 'si' para seguir cargando numeros, 'no' para detener la carga")
+		}
 	}
 
 		document.getElementById('maximo').value = numeroMaximo;

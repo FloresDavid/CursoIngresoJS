@@ -8,6 +8,9 @@ function Mostrar()
 	var contadorDeNumerosPares=0;
 	var acumuladorDeNegativos=0;
 	var acumuladorDePositivos=0;
+	var promedioDePositivos;
+	var promedioDeNegativos;
+	var diferencia;
 
 	//declarar contadores y variables 
 	
@@ -38,18 +41,21 @@ function Mostrar()
 		{
 			contadorDeNumerosPares += 1;
 		}
-
-		respuesta = prompt ("Ingrese no para detener la carga de numeros.");
+		respuesta = prompt ("Ingrese 'si' para seguir cargando numeros, 'no' para detener la carga.");
 	}
 
-	document.getElementById('sumaNegativos').value = acumuladorDeNegativos;
-	document.getElementById('sumaPositivos').value = acumuladorDePositivos;
-	document.getElementById('cantidadPositivos').value = contadorDePositivos;
-	document.getElementById('cantidadNegativos').value = contadorDeNegativos;
-	document.getElementById('cantidadCeros').value = contadorDeCeros;
-	document.getElementById('cantidadPares').value = contadorDeNumerosPares;
-	document.getElementById('promedioPositivos').value = acumuladorDePositivos/contadorDePositivos;
-	document.getElementById('promedioNegativos').value = acumuladorDeNegativos/contadorDeNegativos;
-	document.getElementById('diferencia').value = acumuladorDePositivos + acumuladorDeNegativos;
+	promedioDePositivos = acumuladorDePositivos/contadorDePositivos;
+	promedioDeNegativos = acumuladorDeNegativos/contadorDeNegativos;
+	diferencia = acumuladorDePositivos - acumuladorDeNegativos;
+
+	document.write("La suma de negativos es: " + acumuladorDeNegativos + "<br>");
+	document.write("La suma de Positivos es: " + acumuladorDePositivos + "<br>");
+	document.write("La cantidad de numeros positivos es: " + contadorDePositivos + "<br>");
+	document.write("La cantidad de numeros negativos es: " + contadorDeNegativos + "<br>");
+	document.write("La cantidad de ceros es: " + contadorDeCeros + "<br>");
+	document.write("La cantidad de numeros pares es: " + contadorDeNumerosPares + "<br>");
+	document.write("El promedio de numeros positivos es: " + promedioDePositivos + "<br>");
+	document.write("El promedio de numeros negativos es: " + promedioDeNegativos + "<br>");
+	document.write("La diferencia es: " + diferencia);
 
 }//FIN DE LA FUNCIÓN
