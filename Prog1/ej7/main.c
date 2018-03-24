@@ -14,7 +14,7 @@ int main()
     int menorEdad;
     int notaDelMenor;
     char menorSexo;
-    int cantidadDeMujeres = 0;
+    int hayMujeres = 0;
     int edadPrimerMujer;
     int notaPrimerMujer;
 
@@ -57,9 +57,9 @@ int main()
             menorSexo = sexo;
             notaDelMenor = nota;
         }
-        if (sexo == 'f' && cantidadDeMujeres == 0)
+        if (sexo == 'f' && hayMujeres == 0)
         {
-            cantidadDeMujeres = 1;
+            hayMujeres = 1;
             edadPrimerMujer = edad;
             notaPrimerMujer = nota;
         }
@@ -72,21 +72,21 @@ int main()
     printf("\n\nEl promedio es: %.2f", promedio);
 
     printf ("\n\nLa nota mas baja es %d", notaMasBaja);
-    printf (" El sexo de la persona es: %c", sexoNotaMasBaja);
+    printf (", el sexo de la persona es: %c", sexoNotaMasBaja);
 
     printf ("\n\nLa cantidad de varones mayores a 18 años con nota mayor a 6 es: %d", cantidadDeVarones);
 
     printf ("\n\nEl sexo del mas joven es: %c", menorSexo);
-    printf (" Y la nota es: %d", notaDelMenor);
+    printf (", y la nota es: %d", notaDelMenor);
 
-    if (cantidadDeMujeres == 0)
+    if (hayMujeres == 0)
     {
         printf ("No hubo mujeres.");
     }
     else
     {
         printf ("\n\nLa edad de la primer mujer es: %d", edadPrimerMujer);
-        printf (" Y la nota es: %d", notaPrimerMujer);
+        printf (", y la nota es: %d", notaPrimerMujer);
     }
 
     return 0;
